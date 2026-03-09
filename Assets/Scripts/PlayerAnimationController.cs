@@ -19,10 +19,18 @@ public class PlayerAnimationController : MonoBehaviour
 
         if (isMoving)
         {
-            lastMoveDirection = move;
+            // ќбновл€ем последнее направление движени€
+            lastMoveDirection = move.normalized;
+
+            // ѕередаем текущее направление в аниматор
             animator.SetFloat("Horizontal", move.x);
             animator.SetFloat("Vertical", move.y);
         }
+        else
+        {
+            //  огда персонаж стоит, передаем последнее направление движени€
+            animator.SetFloat("Horizontal", lastMoveDirection.x);
+            animator.SetFloat("Vertical", lastMoveDirection.y);
+        }
     }
 }
-
