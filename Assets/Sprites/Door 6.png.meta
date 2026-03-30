@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fd7387c9daf9a0a4eada77e7a00b7c33
+guid: 92cab1d3e23983447b88da8201ac94a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5337836386332219780
-    second: space2_4-frames_0
+      213: 3664657316439153342
+    second: Door 6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space2_4-frames_0
+      name: Door 6_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 54
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4899c7c89edc31a40800000000000000
-      internalID: 5337836386332219780
+      spriteID: eba54e1c96a7bd230800000000000000
+      internalID: 3664657316439153342
       vertices: []
       indices: 
       edges: []
