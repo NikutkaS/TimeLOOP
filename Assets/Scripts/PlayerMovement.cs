@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public bool freezeRotation = true; // Флаг для заморозки вращения
+    public float moveSpeed = 5f; 
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -12,17 +11,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-
-        // Замораживаем вращение в Rigidbody2D
-        if (freezeRotation)
-        {
-            rb.freezeRotation = true;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
-        else
-        {
-            rb.freezeRotation = false;
-        }
+        rb.freezeRotation = true;
     }
 
     void Update()
@@ -30,12 +19,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Нормализуем только если вектор не нулевой
-        if (movement.sqrMagnitude > 0)
-        {
-            movement = movement.normalized;
-        }
-        // Если движения нет, оставляем movement = Vector2.zero
+        movement = movement.normalized;
     }
 
     void FixedUpdate()
